@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>河南特色物产-新郑红枣-互动交流</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="interaction.css">
+</head>
+<body class="common-bg">
+	<header>
+		<div class="container nav-wrapper">
+			<div class="logo">
+				<img src="img/jianzhilogo.png" alt="新郑红枣 Logo" class="logo-img">
+				<span class="logo-text">河南特色物产</span>
+			</div>
+			<nav>
+				<ul class="nav-menu">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="history.html">历史文化</a></li>
+					<li><a href="planting.html">产地风光</a></li>
+					<li><a href="products.html">产品特色</a></li>
+					<li><a href="eat.html">食用方式</a></li>
+					<li><a href="interaction.html" class="active">互动交流</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="carousel-container">
+		<div class="image-container">
+			<img id="displayed-image" src="images/xisu1.jpg" alt="习俗轮播图">
+		</div>
+		<div class="banner-slogan">
+			<h2>探索河南特色物产，我们一直在路上</h2>
+			<p>新郑红枣 · 8000年种植史 · 国家地理标志产品 · 河南文化名片</p>
+		</div>
+	</div>
+		<div class="container">
+			<!-- 注册会员部分 -->
+			<h2 class="section-title">如果您对河南特色物产感兴趣，欢迎注册账号，成为会员</h2>
+			<form id="registerForm" class="form-container" novalidate>
+				<h3 class="form-title">成为会员</h3>
+				<div class="form-item">
+					<label for="regUsername">用户名 *</label>
+					<input type="text" id="regUsername" name="regUsername"placeholder="请输入2-10位汉字或英文">
+					<span class="error-message" id="usernameError"></span>
+				</div>
+				<div class="form-item">
+					<label for="regPhone">手机号</label>
+					<input type="tel" id="regPhone" name="regPhone" placeholder="请输入11位手机号（选填）">
+					<span class="error-message" id="phoneError"></span>
+				</div>
+				<div class="form-item">
+					<label for="regEmail">邮箱</label>
+					<input type="email" id="regEmail" name="regEmail" placeholder="请输入邮箱地址（选填）">
+					<span class="error-message" id="emailError"></span>
+				</div>
+				<div class="form-item">
+					<label for="regPassword">登录密码 *</label>
+					<input type="password" id="regPassword" name="regPassword"placeholder="请输入6-16位同时含有字母和数字的文本">
+					<span class="error-message" id="passwordError"></span>
+				</div>
+				<div class="form-actions">
+					<button type="submit" id="submitBtn">提交</button>
+					<button type="reset" id="resetBtn">重置</button>
+				</div>
+				<!-- 注册成功提示 -->
+				<div id="regSuccess" class="success-message">注册成功！欢迎您的加入</div>
+			</form>
+			<!-- 留言反馈部分 -->
+			<h2 class="section-title">如果您对相关内容有任何想法，请让我们听见您的声音</h2>
+			<form id="messageForm" class="form-container" novalidate>
+				<h3 class="form-title">我要留言</h3>
+				<div class="form-item">
+					<label for="msgType">留言类型 *</label>
+					<select id="msgType" name="msgType">
+						<option value="">请选择留言类型</option>
+						<option value="suggest">建议反馈</option>
+						<option value="question">咨询问题</option>
+						<option value="praise">好评鼓励</option>
+					</select>
+					<span class="error-message" id="msgTypeError"></span>
+				</div>
+				<div class="form-item">
+					<label for="msgContent">留言内容 *</label>
+					<textarea id="msgContent" name="msgContent" rows="4" placeholder="请输入您的留言"></textarea>
+					<span class="error-message" id="msgContentError"></span>
+				</div>
+				<div class="form-actions">
+					<button type="submit" id="msgSubmitBtn">提交</button>
+					<button type="reset" id="msgResetBtn">重置</button>
+				</div>
+				<!-- 留言成功提示 -->
+				<div id="msgSuccess" class="success-message">留言提交成功！我们会尽快回复</div>
+			</form>
+		</div>
+		<div class="decorative-image-1" ></div>
+		<div class="decorative-image-2" ></div>
+		<!-- HTML5语义化标签：页面页脚 -->
+		<footer>
+			<div class="footer-nav">
+				<a href="index.html">首页</a>
+				<a href="history.html">历史文化</a>
+				<a href="planting.html">产地风光</a>
+				<a href="products.html">产品特色</a>
+				<a href="effect.html">食用方式</a>
+				<a href="interaction.html"class="active">互动交流</a>
+			</div>
+					<div class="footer-slogan">
+						<p >枣香润心，文脉永续——新郑红枣，一口尝尽千年河南味</p>
+						</div>
+					<div class="footer-ref">	
+						<p> 参考文献：《新郑县志·物产篇》《河南红枣栽培技术研究》<br />
+						所有图片与内容仅供学习使用</p>
+					</div>
+		</footer>
+		<!-- 引入外部JS文件 -->
+		<script src="js/interaction.js"></script>
+	</body>
+	</html>

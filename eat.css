@@ -1,0 +1,292 @@
+/* 食用方法页基本样式 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+.common-bg {
+	background-color: #faf6f0;
+}
+/* 食用方法部分专属样式 */
+.effect-content {
+	padding: 2rem 0 4rem; 
+}
+/* 页面标题区 */
+.page-header {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.section-title {
+	color:#fff8e8;
+	margin-bottom: 1.5rem;
+	font-weight: 500;
+	text-align: center;
+	margin-top: 4rem;
+}
+h1.section-title{
+	font-size: 2rem;
+}
+h2.section-title{
+	font-size: 1.6rem;
+}
+/* 标题区图片容器 */
+.title-img-box {
+	width: 200px;
+	height: 200px;
+	margin: 0rem 28rem auto;
+	overflow: hidden;
+	border-radius: 8px;
+}
+/* 标题区图片 */
+.title-img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	background-color: transparent;
+}
+/* 红枣好处介绍区 */
+.benefits-intro {
+	background-color: rgba(220, 110, 100, 0.9);
+	padding: 0.1rem 0rem;
+	margin: 7rem auto;
+	max-width: 600px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2rem) translateX(0rem);
+	 transition: all 0.3s ease;
+}
+.benefits-intro:hover {
+  transform: translateY(-3rem) translateX(0rem);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.benefits-text {
+	text-align: center;
+	margin: 0;
+	color: #fff;
+	max-width: 100%;
+	font-size: 0.9rem;
+	line-height: 1.8;
+}
+.benefits-text h3 {
+	font-size: 1.1rem;
+	margin: 1.5rem 0 1rem 0;
+	font-weight: bold;
+	text-align: center;
+}
+.benefits-text p {
+	margin: 0 0 1rem 0;
+}
+.benefits-text strong {
+	color: #fff8e8;
+	font-weight: bold;
+}
+/* 装饰图的样式 */
+.decorative-image-1 {
+	/* 绝对定位，相对于 body */
+	position: absolute;
+	top: 450px;
+	right: 50px;
+	width: 220px;
+	height: 320px;
+	background-image: url("img/zaohuamo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.decorative-image-2 {
+	position: absolute;
+	top: 490px;
+	left: 50px;
+	width: 220px;
+	height: 320px;
+	background-image: url("img/zaohuamo2.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.decorative-image-3 {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	width: 200px;
+	height: 250px;
+	background-image: url("img/hongzaowenli.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/* 食用方法区 */
+.eat-method {
+	margin: -3rem auto;
+}
+.method-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.3rem;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/* 产品卡片基础样式 */
+.method-item {
+  background-color: #fff8e8;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(136, 0, 0, 0.05);
+  border-left: 4px solid #880000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+/* 鼠标悬停时多层阴影做浮动效果 */
+.method-item:hover {
+  box-shadow: 
+	0 4px 8px rgba(136, 0, 0, 0.35),
+	0 8px 20px rgba(136, 0, 0, 0.30),
+	0 12px 30px rgba(136, 0, 0, 0.25);
+}
+/* 图片容器 */
+.method-img-box {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+/* 图片样式 */
+.method-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+/* 鼠标悬停时图片放大 */
+.method-item:hover .method-img {
+  transform: scale(1.08);
+}
+/* 标题样式 */
+.method-item h4 {
+  color: #880000;
+  margin-bottom: 0rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+/* 描述文字样式 */
+.method-item p {
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  flex: 1; 
+}
+/* 通用的页面容器 */
+.container {
+	max-width: 1400px; 
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+/* 养生食谱区 */
+.health-recipes {
+	margin: 4rem auto;
+}
+.recipe-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* 增加卡片最小宽度 */
+	gap: 2.5rem;
+}
+/* 养生食谱卡片 */
+.recipe-item {
+	background-color: #fff8e8;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	border-top: 4px #8B0000;
+	transition: transform 0.3s ease;
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	height: auto;
+	max-height: 275px;
+}
+/* 让偶数项的图片和内容交换位置 */
+.recipe-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.recipe-item:nth-child(even) .recipe-img-box {
+  margin-right: 0;
+  margin-left: 1.5rem;
+}
+/* 食谱图片容器 */
+.recipe-img-box {
+	flex: 0 0 auto;
+	max-width: 255px;
+	height: auto;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.recipe-img {
+	width: 90%;
+	height: auto;
+	object-fit: cover;
+	transition: all 0.3s ease;
+}
+.recipe-img:hover{
+	transform:scale(1.05);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.01);	
+}
+/* 食谱文字内容的容器 */
+.recipe-content {
+	flex: 1;
+	min-width: 0; /* 文字在空间不足时自动换行 */
+}
+.recipe-content h4{
+	color: #880000;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+/* 让奇数卡片向右偏移 */
+.recipe-item:nth-child(odd) {
+	transform: translateX(40px); /* 第一张、第三张等向右移 */
+}
+/* 让偶数卡片向左偏移 */
+.recipe-item:nth-child(even) {
+	transform: translateX(-40px); /* 第二张、第四张等向左移 */
+}
+/* 注意事项区 */
+.attention {
+	max-width: 700px; 
+	margin: 2rem auto;
+	transform: translateY(0px);
+}
+.small-attention {
+	max-width: 100%; 
+	margin: 0 auto;
+	padding: 0.5rem 1.5rem;
+	background-color: #fff8e8;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	font-size: 0.8rem;
+	transition: all 0.3s ease;
+	}
+	.small-attention:hover {
+	transform:scale(1.05);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	}
+.small-attention h3 {
+	font-size: 1.2rem;
+	color: #8B0000;
+	margin-bottom: 1rem;
+	text-align: center;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px dashed #8B0000;
+}
+.attention-list li {
+	margin-bottom: 0.8rem;
+	padding-left: 1.8rem;
+	position: relative;
+	line-height: 1.5;
+	color: #555;
+}

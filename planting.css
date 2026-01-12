@@ -1,0 +1,247 @@
+/* 产地风光页样式 */
+body {
+	margin: 0;
+	padding: 0;
+}
+.planting-content {
+	margin: 0;
+	padding: 0;
+}
+/* 标题样式 */
+.section-subtitle {
+	margin-top: 2rem; 
+	font-size: 1.6rem;
+	color: #8B0000;
+	text-align: center;
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.5rem;
+}
+/* 视频样式 */
+.video-section {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%); /* 水平居中 */
+	text-align: center;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+/* 视频上的文字样式 */
+.video-text {
+	/* 绝对定位，相对于 .video-section */
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translateX(-50%);
+	/* 文字样式 */
+	font-size: 2.1rem;
+	color: #fff8e8;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+	z-index: 10; 
+}
+.content-video {
+	width: 100% !important;
+	height: auto !important;
+	display: block !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	outline: none !important;
+}
+/* 种植条件与分布区样式 */
+.geo-env {
+	margin: 0rem auto;
+	background-color: #fff8e8;
+	max-width: 1250px;
+	padding: 0.3rem 1.2rem 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+}
+.geo-env:hover {
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.geo-env-wrapper {
+	display: flex;
+	gap: 0.3rem;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+.geo-left-content {
+	flex: 2;
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0px;
+	gap: 0.7rem;
+	align-items: center;
+}
+/* 左侧文字样式 */
+.geo-text {
+  margin-top: 0rem;
+}
+.geo-maps {
+	flex: 1;
+	min-width: 200px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin-top: -2rem;
+	margin-left: 90px;
+}
+/* 图片的基础样式 */
+.content-img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+/* 地图图片的悬停效果 */
+.content-img:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+/* 卡片容器,使用 Grid 布局让三个区域卡片并排显示 */
+.area-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem; 
+	margin-top: 2rem;
+}
+/* 卡片的样式 */
+.area-item {
+	padding: 0.5rem 0.7rem; 
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	border-right: 4px solid #8B0000;
+	transition: all 0.3s ease;
+	height: 100%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+/* 卡片内标题样式 */
+.area-item h3 {
+	font-size: 0.9rem;
+	margin-bottom: 0.3rem;
+	color: #8B0000;
+}
+/* 卡片内正文样式 */
+.area-item p {
+	font-size: 0.75rem;
+	line-height: 1.4;
+}
+/* 卡片浮动效果 */
+.area-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* 黄帝古枣园区样式 */
+.park-content {
+	display: flex;
+	flex-direction: column;
+	color: #fff8e8;
+	gap: 1.3rem;
+	width: 90%;
+	margin: 0 auto;
+}
+.park-text {
+	text-align: center;
+	line-height: 1.8rem;
+}
+.park-pictures {
+	display: flex;
+	gap: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.park-pictures img {
+	flex: 1;
+	min-width: 200px;
+	max-width: 280px;
+	max-height: 200px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	object-fit: cover;
+	border: none;
+	transition: transform 0.3s ease;
+}
+.park-pictures img:hover {
+transform: scale(1.08); /* 鼠标悬停时，图片轻微放大 */
+}
+/* 非遗技艺区样式 */
+.craft-content {
+	display: flex;
+	flex-direction: column;
+	color: #fff8e8;
+	gap: 1.5rem;
+	width: 90%;
+	margin: 0 auto;
+}
+.craft-text {
+	text-align: center;
+	line-height: 1.8rem;
+}
+.craft-pictures {
+	display: flex;
+	gap: 5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.craft-pictures img {
+	flex: 1;
+	min-width: 200px;
+	max-width: 280px;
+	max-height: 220px;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	object-fit: cover;
+	border: none;
+	margin-top: 1rem;
+	transition: transform 0.3s ease;
+}
+.craft-pictures img:hover {
+transform: scale(1.08); /* 鼠标悬停时，图片轻微放大 */
+}
+/* 枣乡旅游景点区样式 */
+.tourist-spots {
+	margin: 4rem auto 3rem;
+}
+.spots-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+}
+.spot-item {
+	background-color: #fff8e8;
+	padding: 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	border-top: 4px solid #8B0000;
+	transition: all 0.3s ease;
+	height: 100%;
+}
+.spot-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.spot-item h3 {
+	font-size: 1.2rem;
+	color: #8B0000;
+	margin-bottom: 0.8rem;
+}
+.spot-item p {
+	line-height: 1.6;
+	font-size: 0.95rem;
+}

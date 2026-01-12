@@ -1,0 +1,208 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* 页面基础样式 */
+body {
+	padding-top: 70px;
+	position: relative;
+	min-height: 100vh; /* 使页面高度铺满视口 */
+}
+a {text-decoration: none;}/* 去掉超链接默认的下划线 */
+/* 装饰图样式 */
+.decorative-image-1 {
+	/* 绝对定位，相对于 body */
+	position: absolute;
+	top: 750px;
+	right: 6px;
+	width: 205px;
+	height: 205px;
+	background-image: url("img/zaozipintu.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.decorative-image-2 {
+	position: absolute;
+	top: 780px;
+	left: 45px;
+	width: 150px;
+	height: 150px;
+	background-image: url("img/shiwuzao.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.decorative-image-3 {
+	position: absolute;
+	bottom: 0px;
+	left: 35px;
+	width: 150px;
+	height: 150px;
+	background-image: url("img/guofengzao2.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.decorative-image-4 {
+	position: absolute;
+	bottom: 65px;
+	right: 55px;
+	width: 280px;
+	height: 280px;
+	background-image: url("img/gufengzao.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 100;
+	pointer-events: none;
+	transform: rotate(10deg);
+	opacity: 0.8;
+}
+/* 视频容器样式 */
+.banner {
+	position: relative;
+	width: 100%;
+	/* 根据视频原比例计算容器高度 (482 / 888) * 100% ≈ 54.28% */
+	padding-top: 54.28%;
+	height: 0;
+	overflow: hidden;
+	margin-top: -15px;
+}
+/* 视频本身样式 */
+#bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* 视频保持原比例并填满容器 */
+	object-fit: cover;
+	object-position: center top 50px;
+	z-index: 1;
+}
+/* 轮播图主容器 */
+.carousel-container {
+	width: 80%;
+	max-width: 800px;
+	margin: 2rem auto;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	position: relative;
+	aspect-ratio: 16/9.5;
+}
+/* 轮播图的内部图片容器 */
+.carousel-container .image-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* 轮播图当前显示图片的样式 */
+#displayed-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	background-color: #f5f5f5;
+}
+/* 轮播图标语样式 */
+.banner-slogan {
+	position: absolute;
+	top: 95%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	text-align: center;
+	/* 半透明枣红色渐变背景 */
+	background: rgba(155, 93, 69, 0.85);
+	padding: 15px 0;
+}
+/* 轮播图标语的主标题样式 */
+.banner-slogan h2 {
+	color: #ffffff;
+	font-size: 1.0rem;
+	margin-bottom: 5px;
+	line-height: 1.2;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+/* 轮播图标语的段落样式 */
+.banner-slogan p {
+	color: #ffffff;
+	font-size: 0.8rem;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	margin: 0;
+	line-height: 1.2;
+}
+/* 文字介绍区域主容器 */
+.intro-text {
+	background-color: #fff8e8;
+	padding: 35px 15%;
+	text-align: center;
+}
+/* 文字介绍区域内部容器 */
+.intro-text .container {
+	max-width: 800px;
+	margin: 0 auto; /* 水平居中 */
+}
+/* 文字介绍区域的标题样式 */
+.intro-text h2 {
+	font-size: 1.75rem;
+	color: #663300;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+/* 文字介绍区域的段落样式 */
+.intro-text p {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #555;
+}
+/* 快讯板块最外层容器 */
+.latest-news {
+	margin: 3rem auto;
+	max-width: 800px;
+	display: block;
+	visibility: visible;
+	padding: 0 2rem;
+	margin-left: -10px;
+}
+/* 快讯的标题样式 */
+h2.section-title {
+	font-size: 1.7rem;
+	color: #663300;
+	line-height: 2;
+	display: block;
+	transform: translate (-15px, -10px);
+	margin-bottom: 1rem;
+	margin-top: -1rem;
+}
+/* 快讯列表容器 */
+.news-list {
+	background-color: #fff8e8;
+	padding: 0.8rem;
+	border-radius: 8px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+/* 快讯列表的悬停交互效果 */
+.news-list:hover {
+	transform: scale(1.02);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+/* 快讯内容基础样式 */
+.news-item {
+	margin-bottom: 1.0rem; /* 减小内容间距 */
+	padding-bottom: 0.8rem;
+	border-bottom: 1px dashed #8B0000;
+}
+.news-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0 ;
+	padding-bottom: 0;
+}
+/* 快讯内容文字样式 */
+.news-item p {
+	font-size: 1rem;
+	text-indent: 2em;
+	color: #663300;
+}

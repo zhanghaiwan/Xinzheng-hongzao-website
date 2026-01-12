@@ -1,0 +1,239 @@
+/* 平铺的底纹 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-image: url("img/shiwuzao.png");
+background-size: 110px 171px; 
+background-position: 25px 25px;
+  background-repeat: repeat;
+  opacity: 0.27;
+  z-index: -1;/*在背景下面· */
+}
+/* 产品特色页全部容器间距 */
+.product-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* 全部小标题样式 */
+.section-title {
+	text-align: center;
+	color: #fff9f0;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px dashed #ffe29c;
+	padding-bottom: 0.5rem;
+	width: fit-content;
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* 主标题的样式 */
+.main-title {
+  font-size: 2.0rem; 
+  color: #ffffff;
+  border-bottom: none; 
+  padding-bottom: 1rem;
+  margin-top: 35px;
+}
+/* 轮播图样式 */
+.carousel-container {
+	width: 400px;
+	height: 200px;
+	overflow: hidden;
+transform: translateY(50px);
+}
+#displayed-image {
+	width: 60%;
+	object-fit: cover;
+	display: block;
+	margin: 20px auto;
+	border-radius: 10px;
+}
+/* 品种介绍区的布局 */
+.variety-intro {
+	margin: 1.5rem auto;
+	max-width: 1100px;
+}
+.variety-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: start; /* 从顶部开始对齐 */
+}
+.variety-item {
+  background-color: #fff8e8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #8B0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  justify-content: space-between;
+}
+/* 产品图片的统一样式 */
+.variety-img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  object-fit: cover;
+	transition: all 0.4s ease;
+}
+/* 鼠标悬停时的效果 */
+.variety-img:hover {
+  transform: scale(1.03);
+}
+.variety-item:hover {
+  box-shadow: 
+	0 4px 8px rgba(136, 0, 0, 0.25),
+	0 8px 20px rgba(136, 0, 0, 0.20),
+	0 12px 30px rgba(136, 0, 0, 0.15);
+}
+.img-placeholder {
+	width: 120px;
+	height: 120px;
+	background-color: #8B000010;
+	border: 2px dashed #8B0000;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #8B0000;
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.9rem;
+}
+.variety-text {
+	width: 100%;
+}
+.variety-text h3 {
+	font-size: 1.4rem;
+	color: #8B0000;
+	margin-bottom: 1rem;
+}
+.variety-text p {
+	margin-bottom: 1rem;
+	line-height: 1.6;
+	color: #333;
+	font-size: 0.95rem;
+}
+/* 营养价值区*/
+.nutrition {
+	margin: 3rem auto;
+	max-width: 1000px;
+}
+.nutrition-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 卡片在容器中水平居中 */
+  gap: 1.5rem; 
+  padding: 0 1rem;
+}
+/* 每个卡片的宽度一致 */
+.nutrition-item {
+  flex: 0 1 300px;/* 卡片宽度固定为300px，空间不够自动换行 */
+  background-color: #fff8e8;
+  padding: 1.5rem;
+  border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
+}
+.nutrition-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px); /* 鼠标放上去时，卡片轻微上移 */
+}
+.nutrition-item h4 {
+	color: #8B0000;
+	margin-bottom: 0.6rem;
+	font-size: 1.1rem;
+}
+.nutrition-item p {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: #555;
+}
+/* 优势内容容器 */
+.strength-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* 文字区域 */
+.strength-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+}
+/* 品质与荣誉区 */
+.certification {
+	margin: 3rem auto;
+	max-width: 1000px;
+}
+.cert-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+.cert-item {
+	background-color: #fff8e8;
+	padding: 1rem 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+	border: 1px solid #8B000020;
+	font-size: 0.95rem;
+	color: #8B0000;
+	text-align: center;
+	min-width: 140px;
+}
+/* 枣型卡通小人图样式 */
+.decorative-image-1 {
+	position: absolute;
+	top: 150px;
+	left: 60px;
+	width: 250px;
+	height: 250px;
+	background-image: url("img/xiaozaoren.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform:rotate(-5deg)
+}
+.decorative-image-2 {
+	position: absolute;
+	top: 530px;
+	right: 15px;  
+	width: 250px;
+	height: 250px;
+	background-image: url("img/xiaozaoren2.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/* 底部红枣产品图样式 */
+.decorative-image-3 {
+	/* 是绝对定位，相对于 body */
+	position: absolute;
+	top: 2200px;
+	right: 15px;
+	width: 230px;
+	height: 230px;
+	background-image: url("img/hongzaochanpin.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	transform 0.3s ease;
+}
+.decorative-image-3:hover{
+	transform: scale(1.08); /* 鼠标悬停时，图片轻微放大 */
+	} 
+}

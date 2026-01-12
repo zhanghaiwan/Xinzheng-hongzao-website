@@ -1,0 +1,213 @@
+
+/* 历史文化页专属背景 */
+.history-page {
+	background-image: url("img/bgshense1.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	position: relative;
+}
+/* 顶部图片的容器 */
+.top-picture {
+	max-width: 800px; 
+	margin: 10em auto 1rem auto; 
+	padding: 0;
+	overflow: visible;
+	height: auto;
+}
+/* 顶部图片 */
+.top-picture img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	display: block;
+	margin: 0 auto;
+}
+/* 中间图片容器 */
+.middle-picture {
+	max-width: 500px;
+	height: auto;
+	margin:0px auto 20px auto;
+	padding: 20px;
+	overflow: hidden;
+}
+/* 中间图片 */
+.middle-picture img {
+	max-width: 100%; 
+	max-height: 100%; 
+	object-fit: contain; 
+	display: block;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+/* 页面标题 */
+.section-title {
+	text-align: center; 
+	color:#f2ede0 ; 
+	margin: 0px 0; 
+	font-size: 26px; 
+}
+.history-content {
+	padding: 2rem 0;
+	margin-top: 1rem;
+}
+/* 时间轴容器 */
+.timeline {
+	max-width: 900px;
+	margin: 1rem auto;
+	position: relative;
+}
+/* 时间轴竖线 */
+.timeline::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4px;
+	height: 100%;
+	background-color: #f5ebb9;
+	border-radius: 2px;
+}
+/* 时间轴节点 */
+.timeline-item {
+	margin-bottom: 3rem;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+}
+/* 奇数节点：文字卡片在左，图片自动居右 */
+.timeline-item {
+	justify-content: flex-start;
+	padding-right: 44.9%;
+}
+/* 偶数节点：文字卡片在右，图片自动居左 */
+.timeline-item:nth-child(even) {
+	justify-content: flex-end;
+	padding-right: 0;
+	padding-left: 44.9%;
+}
+/* 时间轴节点的圆点*/
+.timeline-dot {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20px;
+	height: 20px;
+	background-color: #8B0000;
+	border: 4px solid #F5F5DC;
+	border-radius: 50%;
+	z-index: 10;
+}
+/* 时间轴内容 */
+.timeline-content {
+	width: 90%;
+	background-color: #fff8e8;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+	border: 1px solid #8B000020;
+}
+/* 时间轴标题样式*/
+.timeline-time {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #3f0000;
+	margin-bottom: 0.8rem;
+}
+/* 图片容器：统一基础样式 */
+.timeline-img-wrapper {
+	position: absolute;
+	z-index: 1;
+	transform: none !important;
+	top: -21px !important;
+}
+/* 奇数节点（卡片居左）：图片自动在时间轴右侧 */
+.timeline-item:nth-child(odd) .timeline-img-wrapper {
+	right: 150px !important;
+	left: auto !important;
+}
+/* 偶数节点（卡片居右）：图片自动在时间轴左侧 */
+.timeline-item:nth-child(even) .timeline-img-wrapper {
+	left: 150px !important; /*
+	right: auto !important;
+}
+/* 视频专属定位 */
+.timeline-video-wrapper {
+  position: absolute !important;
+  top: -20px !important;
+  left: 25px !important;
+  width: 395px !important; 
+  height: auto !important;
+  border-radius: 8px !important;
+}
+/* 所有图片和视频尺寸 */
+/* 第1张图片的样式 */
+.img-size-1{
+	width: 280px; 
+	height: auto;
+	border-radius: 8px;
+}
+/* 第1个视频的样式 */
+.img-size-2 {
+	width: 395px !important;
+	height: auto !important;
+	border-radius: 8px;
+	opacity: 1 !important;
+}
+/* 第2张图片的样式 */
+.img-size-3{
+	width: 170px;
+	height: auto;
+	border-radius: 8px;
+}
+/* 第3张图片的样式 */
+.img-size-4{
+	width: 160px;
+	height: auto;
+	border-radius: 8px;
+}
+/* 第4张图片的样式 */
+.img-size-5{
+	width: 180px;
+	height: auto;
+}
+/* 第5张图片的样式 */
+.img-size-6{
+	width: 270px;
+	height: auto;
+}
+/* 第6张图片的样式 */
+.img-size-7{
+	width: 270px;
+	height: auto;
+	border-radius: 8px;
+}
+/* 第7张图片的样式 */
+.img-size-8{
+	width: 260px;
+	height: auto;
+	border-radius: 8px;
+}
+/* 第8张图片的样式 */
+.img-size-9{
+	width: 250px;
+	height: auto;
+	border-radius: 8px;
+}
+/* hover放大浮动效果 */
+.img-size-1:hover,
+.img-size-2:hover,
+.img-size-3:hover,
+.img-size-4:hover,
+.img-size-5:hover,
+.img-size-6:hover,
+.img-size-7:hover,
+.img-size-8:hover,
+.img-size-9:hover{
+	transform: scale(1.07);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	transition: all 0.3s ease;
+}
